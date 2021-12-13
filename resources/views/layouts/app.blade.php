@@ -18,6 +18,9 @@
     <div>
         @yield('foreach')
     </div>
+    <div>
+        @yield('foreach2')
+    </div>
 </div>
 </body>
 </html>

@@ -33,3 +33,8 @@
     @endforeach
 @endsection
 
+@section('foreach2')
+    @foreach($articles as $article)
+        <p>{{$article->name}} - {{$article->body}}</p>
+    @endforeach
+@endsection
