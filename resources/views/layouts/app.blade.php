@@ -13,13 +13,13 @@
 <div class="container mt-4">
     <h1>@yield('header')</h1>
     <div>
-        @yield('content')
-    </div>
-    <div>
         @yield('foreach')
     </div>
     <div>
         @yield('foreach2')
+    </div>
+    <div>
+        @yield('content')
     </div>
 </div>
 </body>

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ArticleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +29,10 @@ Route::get('/about', function () use ($team) {
     $articles = App\Models\Article::all();
     return view('about', ['team' => $team, 'articles' => $articles]);
 })->name('about');
-//Route::get('/', function () {
-//    return "Hello, World!";
-//});
+
+Route::get('team', [ArticleController::class, 'team'])->name('articleTeam');
+
+Route::get('articles', [ArticleController::class, 'index'])->name('articles.index');
+
+Route::get('/articles/{id}', [ArticleController::class, 'show'])->name('articles.show');
 

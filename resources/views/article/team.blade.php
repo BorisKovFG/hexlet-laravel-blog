@@ -11,39 +11,15 @@
 {{--<div class="container mt-4">--}}
 {{--    <h1>О блоге</h1>--}}
 {{--    <p>Эксперименты с Ларавелем на Хекслете!</p>--}}
-{{--    @foreach($team as $user)--}}
-{{--        <p>{{$user['name']}} - {{$user['position']}}</p>--}}
-{{--    @endforeach--}}
+
 {{--</div>--}}
 {{--</body>--}}
 {{--</html>--}}
-
 @extends('layouts.app')
 <!-- Секция, содержимое которой обычный текст. -->
 @section('title', 'О блоге')
 
 <!-- Секция, содержащая HTML блок. Имеет открывающую и закрывающую часть. -->
 @section('content')
-    <h1>О блоге</h1>
+    <h1>О блоге!!</h1>
     <p>Эксперименты с Laravel на Хекслете!</p>
-@endsection
-@section('foreach')
-    @foreach($team as $user)
-        <p>{{$user['name']}} - {{$user['position']}}</p>
-    @endforeach
-@endsection
-
-@section('foreach2')
-    <table border="1">
-            <tr>
-                <td>Name</td>
-                <td>Body</td>
-            </tr>
-            @foreach($articles as $article)
-                <tr>
-                    <td>{{$article->name}}</td>
-                    <td>{{$article->body}}</td>
-                </tr>
-            @endforeach
-        </table>
-@endsection
